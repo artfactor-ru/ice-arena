@@ -1,0 +1,41 @@
+.sitemap {
+    @include list-destroy;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include p-style;
+    &>li:not(:last-child) {
+        padding-right: 30px;
+    }
+    &>li {
+        box-sizing: border-box;
+        max-width: 14%;
+        font-weight: 500;
+        @include tablets {
+            max-width: none;
+            width: 33%;
+            padding-right: 30px;
+            margin-bottom: 40px;
+        }
+        @include mobile {
+            width: 100%;
+        }
+        // text-align: center;
+        &>ul {
+            @include list-destroy;
+            display: flex;
+            flex-direction: column;
+            & li {
+                margin-bottom: 10px;
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &>li>a {
+        color: #000;
+        display: block;
+        margin-bottom: 25px;
+    }
+}

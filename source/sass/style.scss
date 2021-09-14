@@ -1,0 +1,35 @@
+    // Библ
+    @import 'libs/swiperbundle';
+    @import 'libs/fancybox';
+    // инстр
+    @import 'utils/font';
+    @import 'utils/_variables';
+    @import 'utils/_mixin';
+    @import 'utils/_extend';
+    @import 'common/common';
+    @import 'common/header';
+    @import 'common/footer';
+    // @import 'common/order';
+    @import 'common/order-bottom';
+    @import 'common/timetable';
+    // @import 'common/calc';
+    // @import 'common/banner-inner';
+    @import 'common/breadcrumbs';
+    @import 'common/popup';
+    @import 'common/accordion';
+    @import 'common/banner';
+    @import 'common/pagination';
+    // Главная
+    @import 'pages/index/map';
+    @import 'pages/index/hero';
+    @import 'pages/index/servs';
+    @import 'pages/index/history';
+    // Услуги
+    @import 'pages/serv/serv';
+    @import 'pages/serv/serv-in';
+    // Новости
+    @import 'common/news';
+    @import 'pages/news-detail/article';
+    @import 'pages/partners/partners';
+    @import 'pages/sitemap/sitemap';
+    @import 'pages/404/404';

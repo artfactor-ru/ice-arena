@@ -1,0 +1,263 @@
+// .order-bottom {
+//     background: $color-red;
+//     text-align: center;
+//     color: #ffffff;
+//     padding: 25px 0;
+//     @include laptop {
+//         padding: 35px 0;
+//     }
+//     & h2 {
+//         margin-bottom: 15px;
+//     }
+//     &__form-wrap {
+//         display: flex;
+//         flex-direction: column;
+//         margin-top: 15px;
+//         @include tablets {
+//             flex-direction: row;
+//             flex-wrap: wrap;
+//             align-items: center;
+//             justify-content: space-between;
+//         }
+//         @include laptop {
+//             padding-left: 17%;
+//             padding-right: 17%;
+//         }
+//         @include desktop {
+//             padding-left: 18%;
+//             padding-right: 18%;
+//         }
+//     }
+//     & .button {
+//         // box-shadow: none;
+//         padding-top: 15px;
+//         padding-bottom: 15px;
+//         order: 4;
+//         margin-top: 25px;
+//         @include tablets {
+//             order: 4;
+//             margin-top: 25px;
+//             margin-left: auto;
+//             margin-right: auto;
+//             padding-top: 15px;
+//             padding-bottom: 15px;
+//             padding-left: 40px;
+//             padding-right: 40px;
+//             width: auto;
+//         }
+//         // @include laptop {
+//         //     width: 28%;
+//         // }
+//         // @include desktop {
+//         //     width: 25%;
+//         //     margin-left: auto;
+//         // }
+//     }
+//     & .input {
+//         margin-bottom: 10px;
+//         @include tablets {
+//             margin-bottom: 12px;
+//             width: 48%;
+//         }
+//         @include desktop {
+//             margin-right: 15px;
+//         }
+//     }
+//     &__licenses {
+//         font-style: normal;
+//         font-weight: 300;
+//         font-size: 12px;
+//         line-height: 133.9%;
+//         /* or 16px */
+//         text-indent: 1px;
+//         color: #FFFFFF;
+//         @include tablets {
+//             order: 3;
+//             width: 100%;
+//             margin-top: 12px;
+//             padding-left: 15%;
+//             padding-right: 15%;
+//         }
+//         @include laptop {
+//             padding-left: 15%;
+//             padding-right: 15%;
+//         }
+//         & a {
+//             &:hover {
+//                 color: $color-black;
+//                 // opacity: 0.5;
+//             }
+//         }
+//     }
+// }
+.order-bottom {
+    position: relative;
+    background-color: $color-white;
+    // background-image: url(../img/form-bg.png);
+    & .text-align {
+        position: relative;
+        z-index: 1;
+    }
+    & form {
+        position: relative;
+        z-index: 1;
+    }
+    &__form-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include laptop {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        @include tablets {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+    }
+    & label {
+        display: flex;
+        flex-direction: column;
+        max-width: 250px;
+        margin-right: 10px !important;
+        @include laptop {
+            max-width: none;
+            width: 32%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        @include tablets {
+            width: 100%;
+        }
+    }
+    .label-text {
+        max-width: none;
+        flex-grow: 1;
+    }
+    .label-file-wrap {
+        padding-bottom: 5px;
+        & svg {
+            flex-shrink: 0;
+        }
+    }
+    & input.date {
+        max-width: 150px;
+        @include laptop {
+            max-width: none;
+            width: 100%;
+        }
+    }
+    & input.date {
+        max-width: 150px;
+        @include laptop {
+            max-width: none;
+            width: 100%;
+        }
+    }
+    & span input {
+        width: 100%;
+    }
+    &__licenses {
+        margin: 0;
+        display: flex;
+        // margin-top: 30px;
+        font-size: 13px;
+        line-height: 16px;
+        max-width: 250px;
+        margin-bottom: 5px;
+        @include laptop {
+            order: 4;
+            width: 100%;
+            max-width: none;
+        }
+        @include tablets {
+            order: 3;
+        }
+        & input {
+            width: 15px !important;
+            height: 15px;
+            flex-shrink: 0;
+            border-radius: none;
+            margin-right: 10px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: #FFFFFF;
+                border: 1px solid $color-light-grey;
+                pointer-events: none;
+                cursor: pointer;
+                top: 50%;
+                left: 0%;
+                transform: translateY( -50%);
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: url(../img/check.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                pointer-events: none;
+                display: none;
+                z-index: 1;
+                top: 50%;
+                left: 0%;
+                transform: translateY( -50%);
+                cursor: pointer;
+            }
+        }
+        & input:checked::before {
+            display: block;
+        }
+        & a {
+            color: $color-marine;
+            text-decoration: underline;
+        }
+    }
+    & .button {
+        margin-left: auto;
+        margin-bottom: 5px;
+        @include laptop {
+            margin-left: 0;
+            margin-bottom: 15px;
+        }
+        @include tablets {
+            margin-top: 20px;
+            order: 4;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+#canvasForm {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    object-fit: cover;
+    object-position: left;
+}
+
+#fl_inp {
+    display: none;
+}
+
+#fl_name {
+    white-space: nowrap;
+    margin: 0;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.input--file {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,323 @@
+.timetable {
+    background: $color-white;
+    &__legend {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include tablets {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        @include mobile {
+            align-items: center;
+        }
+    }
+    &__legend-list {
+        @include list-destroy;
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        @include laptop {
+            width: 80%;
+        }
+        @include tablets {
+            width: 100%;
+            font-size: 14px;
+            order: 2;
+        }
+    }
+    &__item {
+        width: 33%;
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        @include mobile {
+            width: 100%;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__color {
+        display: inline-block;
+        width: 70px;
+        height: 23px;
+        margin-right: 15px;
+    }
+    // &__item--green {
+    //     & .timetable__color {
+    //         background-color: $green;
+    //     }
+    // }
+    // &__item--purple {
+    //     & .timetable__color {
+    //         background-color: $purple;
+    //     }
+    // }
+    // &__item--orange {
+    //     & .timetable__color {
+    //         background-color: $orange;
+    //     }
+    // }
+    // &__item--yellow {
+    //     & .timetable__color {
+    //         background-color: $yellow;
+    //     }
+    // }
+    // &__item--blue {
+    //     & .timetable__color {
+    //         background-color: $blue;
+    //     }
+    // }
+    // &__item--red {
+    //     & .timetable__color {
+    //         background-color: $red;
+    //     }
+    // }
+    &__name {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__excel {
+        display: flex;
+        flex-direction: column;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height */
+        color: $color-title;
+        text-align: left;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 46px;
+            height: 46px;
+            background-image: url(../img/exl.svg);
+            left: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @include tablets {
+            margin-bottom: 20px;
+        }
+    }
+    &__weight {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: #ADC4D4;
+    }
+    &__list {
+        @include list-destroy;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 40px;
+        @include tablets {
+            flex-direction: column;
+        }
+    }
+    &__list-item {
+        width: 14%;
+        background: #E0E7F2;
+        @include tablets {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    &__title {
+        padding: 10px 0px;
+        text-align: center;
+        position: relative;
+        background: #E0E7F2;
+        @include tablets {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        & svg {
+            display: none;
+            @include tablets {
+                display: block;
+                position: absolute;
+                right: 20px;
+                pointer-events: none;
+            }
+        }
+    }
+    &__weekday {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: #133E65;
+        display: block;
+        pointer-events: none;
+    }
+    &__time {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height, or 122% */
+        text-align: center;
+        color: #133E65;
+        display: block;
+        pointer-events: none;
+    }
+    &__smalllist {
+        @include list-destroy;
+    }
+    &__smalllist-item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        background: #fff;
+        margin-left: 0px;
+        margin-right: 2px;
+        margin-bottom: 2px;
+        min-height: 54px;
+        box-sizing: border-box;
+        padding: 10px 10px 10px 0;
+        &:hover {
+            & .timetable__smalllist-title {
+                color: $color-blue;
+                text-decoration: underline;
+            }
+        }
+    }
+    &__smalllist-title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        transition: $transition-speed;
+        text-align: left;
+    }
+    &__time-wrap {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        /* identical to box height, or 129% */
+        text-align: center;
+        color: $color-title;
+        text-align: left;
+        padding-left: 10px;
+        // width: 30%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 12px;
+        text-align: left;
+    }
+    &__link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0;
+    }
+}
+
+.timetable__label {
+    position: relative;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    // &::before {
+    //     content: "";
+    //   
+    // }
+    // &--yellow {
+    //     &::before {
+    //         background-color: $yellow;
+    //     }
+    // }
+    // &--green {
+    //     &::before {
+    //         background-color: $green;
+    //     }
+    // }
+    // &--purple {
+    //     &::before {
+    //         background-color: $purple;
+    //     }
+    // }
+    // &--orange {
+    //     &::before {
+    //         background-color: $orange;
+    //     }
+    // }
+    // &--blue {
+    //     &::before {
+    //         background-color: $blue;
+    //     }
+    // }
+    // &--red {
+    //     &::before {
+    //         background-color: $red;
+    //     }
+    // }
+}
+
+.block-link .timetable__list {
+    margin-bottom: 50px;
+    @include tablets {
+        margin-bottom: 25px;
+    }
+}
+
+.timetable__nav {
+    display: flex;
+    justify-content: flex-end;
+    @include mobile {
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+    .swiper-button-prev {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: auto;
+        height: auto;
+        margin-top: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px;
+        @include tablets {
+            margin-right: 0px;
+            font-size: 12px;
+            padding: 8px 8px;
+        }
+        &::after {
+            display: none;
+        }
+    }
+    .swiper-button-next {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: auto;
+        height: auto;
+        margin-top: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+        &::after {
+            display: none;
+        }
+        @include tablets {
+            font-size: 12px;
+            padding: 8px 8px;
+        }
+    }
+}

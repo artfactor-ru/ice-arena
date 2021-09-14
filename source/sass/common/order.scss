@@ -1,0 +1,89 @@
+.order {
+    padding-bottom: 40px;
+    color: #ffffff;
+    &__wrap {
+        background: $color-dark-grey;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding: 12px 27px;
+        @include laptop {
+            display: flex;
+            padding: 25px 27px;
+        }
+        @include desktop {
+            padding-right: 115px;
+        }
+    }
+    &__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        @include laptop {
+            flex-shrink: 0;
+            padding-right: 35px;
+            padding-top: 15px;
+        }
+    }
+    &__form-wrap {
+        display: flex;
+        flex-direction: column;
+        @include tablets {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    & .button {
+        // box-shadow: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        order: 4;
+        margin-top: 25px;
+        @include tablets {
+            order: 3;
+            margin-top: 0;
+            width: 32%;
+        }
+        @include laptop {
+            width: 28%;
+        }
+        @include desktop {
+            width: 30%;
+            margin-left: 20px;
+            margin-right: auto;
+        }
+    }
+    & .input {
+        margin-bottom: 10px;
+        @include tablets {
+            margin-bottom: 0;
+            width: 32%;
+        }
+        @include laptop {
+            width: 34%;
+        }
+        @include desktop {
+            width: 30%;
+            margin-right: 15px;
+        }
+    }
+    &__licenses {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 133.9%;
+        /* or 16px */
+        text-indent: 1px;
+        color: #FFFFFF;
+        @include tablets {
+            order: 4;
+            width: 66%;
+            margin-top: 12px;
+        }
+    }
+}

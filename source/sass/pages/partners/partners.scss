@@ -1,0 +1,11 @@
+.partners {
+    background: $color-white;
+}
+
+.swiper-container--partners {
+    height: 278px;
+    & .swiper-slide {
+        width: auto !important;
+        max-width: 100%;
+    }
+}

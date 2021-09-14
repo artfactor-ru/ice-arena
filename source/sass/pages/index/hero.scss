@@ -1,0 +1,76 @@
+.hero {
+    @include top-padding;
+    height: calc(100vh - 150px);
+    max-height: 750px;
+    min-height: 600px;
+    background: #F4F2F4;
+    @include tablets {
+        height: calc(100vh - 65px);
+        min-height: 500px;
+    }
+    &__slide {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+    &__column {
+        margin-top: 90px;
+        max-width: 585px;
+        @include mobile {
+            margin-top: 50px;
+        }
+    }
+    &__title {
+        margin-bottom: 40px;
+        position: relative;
+    }
+    &__desc {
+        margin-bottom: 30px;
+        position: relative;
+    }
+    &__nav {
+        @include nav;
+        bottom: 90px;
+        @include mobile {
+            bottom: 50px;
+        }
+    }
+}
+
+.hero canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    @include tablets {
+        height: 50% !important;
+        width: auto !important;
+        bottom: 0 !important;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.hero__text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 10%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    max-width: 1650px;
+    @include tablets {
+        height: 5%;
+    }
+    @include mobile {
+        height: 4%;
+    }
+}

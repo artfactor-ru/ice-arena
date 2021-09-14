@@ -1,0 +1,24 @@
+.news__article {
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+        flex-wrap: wrap;
+    }
+}
+
+.news__article-img {
+    width: 30%;
+    flex-shrink: 0;
+    margin-right: 10%;
+    & img {
+        width: 100%;
+    }
+    @include tablets {
+        margin-right: 3%;
+    }
+    @include mobile {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

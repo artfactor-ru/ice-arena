@@ -1,0 +1,101 @@
+.fancybox-is-open .fancybox-bg {
+    background: rgba(97, 162, 180, 0.37);
+    opacity: 1;
+}
+
+.form-popup {
+    padding: 40px 4%;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 645px;
+    // background: $color-black;
+    // text-align: center;
+    color: $color-text-main;
+    background-image: url(../img/form-bg.png);
+    background-size: cover;
+}
+
+.form-popup__title {
+    @include h3-style;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    color: $color-title;
+}
+
+.form-popup__desc {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-popup {
+    & input {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    & span {
+        width: 100%;
+    }
+    & span input:not(input[type=checkbox]) {
+        width: 100%;
+    }
+    & textarea {
+        width: 100%;
+        font: inherit;
+        margin-bottom: 5px;
+    }
+    & .button__red {
+        margin: 0 auto;
+    }
+    .order-bottom__licenses {
+        margin-top: 12px;
+        max-width: none;
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        & input {
+            width: 16px;
+        }
+        & span {
+            width: auto;
+        }
+    }
+    .button {
+        padding: 17px 50px;
+        margin-bottom: 100px;
+    }
+    .wpcf7-not-valid-tip {
+        bottom: -24%;
+    }
+}
+
+.modal {
+    text-align: center;
+    width: 590px;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    & h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: $color-title;
+        // @include laptop {
+        //     font-size: 32px;
+        //     line-height: 36px;
+        // }
+        // @include desktop {
+        //     font-size: 32px;
+        //     line-height: 36px;
+        // }
+    }
+    & p {
+        font-size: 20px;
+        line-height: 25px;
+        // @include laptop {
+        //     font-size: 24px;
+        //     line-height: 30px;
+        // }
+    }
+}

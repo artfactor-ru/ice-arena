@@ -1,0 +1,497 @@
+@mixin laptop {
+    @media(max-width: 1650px) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media(max-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media(max-width: 420px) {
+        @content;
+    }
+}
+
+@mixin btn-destroy {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    // box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin input-destroy {
+    border: none;
+    background: transparent;
+    padding: 0;
+    -webkit-border-radius: 0px;
+    // margin: 0;
+    // -webkit-appearance: none;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+}
+
+// Удаляем стили списка
+@mixin list-destroy {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    // font-style: inherit;
+    // font-size: inherit;
+    // font-family: inherit;
+}
+
+// Типографика
+@mixin h1-style {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 60px;
+    /* identical to box height, or 56px */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @include laptop {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    @include tablets {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    @include mobile {
+        font-size: 40px;
+        line-height: 40px;
+    }
+}
+
+@mixin h2-style {
+    margin: 0;
+    padding: 0;
+    font-size: 46px;
+    line-height: 50px;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: uppercase;
+    @include laptop {
+        font-size: 42px;
+        line-height: 48px;
+    }
+    @include tablets {
+        font-size: 34px;
+        line-height: 40px;
+    }
+    @include mobile {
+        font-size: 22px;
+        line-height: 36px;
+    }
+}
+
+@mixin h3-style {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 37px;
+    @include laptop {
+        font-size: 30px;
+        line-height: 32px;
+    }
+    @include tablets {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    @include mobile {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@mixin h4-style {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 36px;
+    @include laptop {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    @include tablets {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    @include mobile {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@mixin h5-style {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    @include laptop {
+        font-size: 26px;
+        line-height: 28px;
+    }
+    @include tablets {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    @include mobile {
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
+
+@mixin h6-style {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 36px;
+    @include laptop {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    @include tablets {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    @include mobile {
+        font-size: 17px;
+        line-height: 25px;
+    }
+}
+
+@mixin p-style {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    @include laptop {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+@mixin p-style-small {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    @include tablets {
+        font-size: 13px;
+        line-height: 16px;
+    }
+}
+
+// Расстояние от шапке
+@mixin top-padding {
+    padding-top: 0px;
+    @include tablets {
+        padding-top: 65px;
+    }
+}
+
+@mixin block-style {
+    padding: 115px 0px 90px;
+    @include laptop {
+        padding: 80px 0px 80px;
+    }
+    @include tablets {
+        padding: 50px 0px 50px;
+    }
+    @include mobile {
+        padding: 30px 0px 30px;
+    }
+    & h2 {
+        // @include h2-style;
+        color: $color-title;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 65px;
+        @include laptop {
+            padding-bottom: 50px;
+        }
+        @include tablets {
+            padding-bottom: 35px;
+        }
+        @include mobile {
+            padding-bottom: 25px;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+        &>span {
+            position: relative;
+            display: inline-block;
+        }
+        &>span::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            border-bottom: 1px solid #ADC4D5;
+            width: 0vw;
+            margin: 0 20px;
+            left: 100%;
+            transition: all 5s ease-in-out;
+        }
+        &>span::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            border-bottom: 1px solid #ADC4D5;
+            width: 0vw;
+            margin: 0 20px;
+            right: 100%;
+            transition: all 5s ease-in-out;
+        }
+    }
+    & h2.visible {
+        &>span::after {
+            width: 100vw;
+        }
+        &>span::before {
+            width: 100vw;
+        }
+    }
+}
+
+@mixin button {
+    background: $color-marine;
+    border-radius: 30px;
+    padding: 15px 50px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+    transition: $transition-speed;
+    position: relative;
+    & .circle {
+        position: absolute;
+        height: 100%;
+        border-radius: 30px;
+        background: $color-blue;
+        width: 50px;
+        top: 0;
+        left: -1px;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+    }
+    &:hover {
+        .circle {
+            width: 101%;
+            opacity: 1;
+        }
+    }
+    .button__text {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@mixin label {
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    box-sizing: border-box;
+    padding: 20px 25px 0px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    /* or 23px */
+    color: #000;
+    pointer-events: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    @include laptop {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    &::after {
+        content: '';
+        // position: absolute;
+        position: relative;
+        width: 1px;
+        flex-basis: 100%;
+        margin-top: 10px;
+        bottom: 0;
+        // margin: 0 20px;
+        // left: 50%;
+        // transform: translateX(-50%);
+        background: rgba(68, 68, 68, 0.3);
+    }
+    // &.orange {
+    //     background: $orange;
+    // }
+    // &.blue {
+    //     background: $blue;
+    //     &::after {
+    //         background: rgba(68, 68, 68, 0.3);
+    //     }
+    // }
+    // &.green {
+    //     background: $green;
+    //     &::after {
+    //         background: rgba(68, 68, 68, 0.3);
+    //     }
+    // }
+    // &.yellow {
+    //     background: $yellow;
+    //     &::after {
+    //         background: rgba(68, 68, 68, 0.3);
+    //     }
+    // }
+    // &.red {
+    //     background: $red;
+    //     &::after {
+    //         background: rgba(68, 68, 68, 0.3);
+    //     }
+    // }
+    // &.purple {
+    //     background: $purple;
+    //     &::after {
+    //         background: rgba(68, 68, 68, 0.3);
+    //     }
+    // }
+    // &.light-green {
+    //     background: $light-green;
+    //     &::after {
+    //         background: rgba(68, 68, 68, 0.3);
+    //     }
+    // }
+    // &.brown {
+    //     background: $brown;
+    //     &::after {
+    //         background: rgba(68, 68, 68, 0.3);
+    //     }
+    // }
+    // &.light-red {
+    //     background: $light-red;
+    //     &::after {
+    //         background: rgba(68, 68, 68, 0.3);
+    //     }
+    // }
+    // &.pink {
+    //     background: $pink;
+    //     &::after {
+    //         background: rgba(68, 68, 68, 0.3);
+    //     }
+    // }
+    &.light-blue {
+        background: #D9EFFF;
+        &::after {
+            background: #A4CAE6;
+        }
+    }
+}
+
+@mixin nav {
+    position: absolute;
+    margin: 0 auto;
+    padding: 0 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1650px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    @include laptop {
+        width: 100%;
+        padding: 0px 35px;
+    }
+    @include tablets {
+        width: 100%;
+        padding: 0px 25px;
+    }
+    @include mobile {
+        padding: 0px 20px;
+    }
+    & .swiper-button-next {
+        position: static;
+        height: 100%;
+        width: 45px;
+        margin-top: 0;
+        margin-left: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &::after {
+            display: none;
+        }
+    }
+    & .swiper-button-prev {
+        position: static;
+        height: 100%;
+        width: 45px;
+        margin-top: 0;
+        margin-right: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &::after {
+            display: none;
+        }
+    }
+    & .swiper-pagination {
+        position: static;
+        width: auto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 73px;
+        text-transform: uppercase;
+        color: $color-title;
+        letter-spacing: -0.10em;
+        @include mobile {
+            font-size: 46px;
+            line-height: 46px;
+        }
+    }
+    & .swiper-pagination-total {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 44px;
+        text-transform: uppercase;
+        color: $color-blue;
+        @include mobile {
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+// .button {
+//     text-decoration: none;
+//     border-radius: 25px;
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 13px;
+//     display: flex;
+//     align-items: center;
+//     text-align: center;
+//     color: #FFFFFF;
+//     display: block;
+//     text-transform: uppercase;
+//     padding: 14px 30px;
+//     transition: $transition-speed;
+//     @include tablets {
+//         font-size: 16px;
+//         line-height: 16px;
+//         text-transform: uppercase;
+//         padding: 15px 39px;
+//     }
+//     @include laptop {
+//         padding: 20px 35px;
+//     }
+// }
+// .button__red {
+//     @extend .button;
+//     background: $color-red;
+//     &:hover {
+//         color: #FFFFFF;
+//         box-shadow: 0px 7px 25px rgba(251, 9, 55, 0.7);
+//     }
+// }
+// .button__black {
+//     @extend .button;
+//     background: $color-black;
+//     &:hover {
+//         color: #FFFFFF;
+//         box-shadow: 0px 7px 25px rgba(0, 0, 0, 0.8);
+//     }
+// }

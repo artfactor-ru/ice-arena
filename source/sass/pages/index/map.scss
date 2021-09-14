@@ -1,0 +1,110 @@
+.map {
+    height: 545px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @include mobile {
+        background: transparent;
+    }
+    &>.container {
+        padding: 0;
+    }
+    &__contact-wrap {
+        @include mobile {
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__contact {
+        position: relative;
+        background: rgba(255, 255, 255, 0.9);
+        max-width: 383px;
+        box-sizing: border-box;
+        padding: 35px 45px;
+        margin-left: 25px;
+        @include tablets {
+            padding: 25px 35px;
+            max-width: 320px;
+        }
+        @include mobile {
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            max-width: none;
+            @include block-style;
+        }
+        & h2 {
+            @include h5-style;
+            text-transform: none;
+            text-align: center;
+            margin-bottom: 20px;
+            @include mobile {
+                @include h2-style;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &__contact-row {
+        display: flex;
+        flex-direction: column;
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+        @include mobile {
+            text-align: center;
+        }
+    }
+    &__contact__small {
+        @include p-style-small;
+        color: $color-blue;
+        margin-left: 22px;
+    }
+    &__contact-detail {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height */
+        color: $color-marine;
+        border-bottom: 1px dashed $color-marine;
+    }
+}
+
+.yandexmap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include mobile {
+        position: static;
+        order: 2;
+    }
+}
+
+.modal-text {
+    width: 100%;
+    max-width: 518px;
+    box-sizing: border-box;
+    padding: 0 !important;
+    h2 {
+        @include h5-style;
+        color: $color-title;
+        text-transform: none;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    p {
+        margin-bottom: 35px;
+    }
+    &__wrap {
+        padding: 35px 55px;
+        @include tablets {
+            padding: 30px 35px;
+        }
+    }
+}
