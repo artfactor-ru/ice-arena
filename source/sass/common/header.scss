@@ -405,3 +405,11 @@
                 .open .header__mobile-nav {
                     transform: translateX(0%);
                 }
+                
+                .header__column--onmobile {
+                    display: none;
+                    @include mobile {
+                        display: flex;
+                        align-items: flex-end;
+                    }
+                }
