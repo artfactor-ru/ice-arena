@@ -104,8 +104,8 @@ if (document.querySelector('.swiper-container--hero')) {
             crossFade: true
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.hero__nav .swiper-button-next',
+            prevEl: '.hero__nav .swiper-button-prev',
         },
         pagination: {
             el: ".swiper-pagination",
@@ -116,23 +116,23 @@ if (document.querySelector('.swiper-container--hero')) {
     });
 }
 
-let swiperTime;
-if (document.querySelector('.swiper-container--timetable')) {
-    swiperTime = new Swiper('.swiper-container--timetable', {
-        slidesPerView: 1,
+// let swiperTime;
+// if (document.querySelector('.swiper-container--timetable')) {
+//     swiperTime = new Swiper('.swiper-container--timetable', {
+//         slidesPerView: 1,
 
-        speed: 1500,
-
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+//         speed: 1500,
 
 
+//         navigation: {
+//             nextEl: '.swiper-button-next',
+//             prevEl: '.swiper-button-prev',
+//         },
 
-    });
-}
+
+
+//     });
+// }
 
 
 let swiperPartners;
